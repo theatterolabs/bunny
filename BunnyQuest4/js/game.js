@@ -20747,7 +20747,7 @@ Mb.prototype = {
     },
     create: function() {
         console.log("Game Loaded");
-        requestAds();
+        //requestAds();
         B.create();
         R.create();
         l.create();
