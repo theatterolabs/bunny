@@ -20750,15 +20750,15 @@ Mb.prototype = {
         	adBreak({
         type: 'preroll',  // ad shows at start of next level
         name: 'start-game',
-        adBreakDone: (placementInfo) => {
-breakType: 'preroll',
-  breakName: 'stat-game',
-  breakFormat: 'interstitial',
-  breakStatus: 'notReady|timeout|error|noAdPreloaded|frequencyCapped|ignored|other|dismissed|viewed',
-            
-        },
+        adBreakDone: (placementInfo) => {},
         
       });
+        function adBreakDone() {
+              breakType: 'preroll',
+              breakName: 'start-game',
+              breakFormat: 'interstitial|reward',
+              breakStatus: 'notReady|timeout|error|noAdPreloaded|frequencyCapped|ignored|other|dismissed|viewed',
+        }
         //requestAds();
         B.create();
         R.create();
