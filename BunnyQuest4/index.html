@@ -63,7 +63,7 @@
 </head>
 	
 	
-<body style="background-color: #102b07;" onload="adBreak();">
+<body style="background-color: #102b07;" onload="playad();">
 
 	 <!-- ********************************************** BEGIN H5 ADS *****************************************-->
     <script async
@@ -75,7 +75,18 @@
       window.adsbygoogle = window.adsbygoogle || [];
       var adBreak = adConfig = function(o) {adsbygoogle.push(o);}
     </script>
+<script>
+	function playad() {
+		adBreak({
+        type: 'next',  // ad shows at start of next level
+        name: 'restart-game',
+        beforeAd: () => { },  // You may also want to mute the game's sound.
+        afterAd: () => { },    // resume the game flow.
+      });
 
+		
+	}
+</script>
     <!-- ********************************************** END H5 ADS *****************************************-->
 	
 	  <div id="wrongRotation">
