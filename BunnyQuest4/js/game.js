@@ -20747,6 +20747,18 @@ Mb.prototype = {
     },
     create: function() {
         console.log("Game Loaded");
+        	adBreak({
+        type: 'preroll',  // ad shows at start of next level
+        name: 'start-game',
+        adBreakDone: (placementInfo) => {
+breakType: 'preroll',
+  breakName: 'stat-game',
+  breakFormat: 'interstitial',
+  breakStatus: 'notReady|timeout|error|noAdPreloaded|frequencyCapped|ignored|other|dismissed|viewed',
+            
+        },
+        
+      });
         //requestAds();
         B.create();
         R.create();
